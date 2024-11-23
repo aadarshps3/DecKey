@@ -144,12 +144,13 @@
   <!-- Login Form -->
   <div class="login-container">
     <h2 class="mb-4" style="color: #333; font-weight: 600;">Welcome Back</h2>
-    <form>
+    <form method="post">
+      {% csrf_token %}
       <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Enter your email">
+        <input type="text" class="form-control" name="uname" placeholder="Enter your Username">
       </div>
       <div class="mb-3">
-        <input type="password" class="form-control" placeholder="Enter your password">
+        <input type="password" class="form-control" name="pass" placeholder="Enter your password">
       </div>
       <button type="submit" class="btn btn-custom btn-block w-100">Login</button>
     </form>
